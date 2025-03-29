@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="4.css">
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td><p>Input :</p></td>
+            <td><input type="text" id="inputangka"></td>
+        </tr>
+        <tr>
+            <td><p>Output :</p></td>
+            <td><input type="text" id="hasilangka" readonly></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <select id="pil">
+                    <option value="dec_binary">Desimal ke Biner</option>
+                    <option value="binary_dec">Biner ke Desimal</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="pil_button">
+                <button onclick="proses()">PROSES</button>
+                <button onclick="reset()">RESET</button>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function proses() {
+            let input = document.getElementById("inputangka").value;
+            let pil = document.getElementById("pil").value;
+            let hasil = document.getElementById("hasilangka");
+
+            if (input === "") {
+                alert("Masukkan Angka Terlebih Dahulu!!");
+                return;
+            }
+
+            if (pil === "dec_binary") {
+                let dec = parseInt(input);
+                if (isNaN(dec) || dec < 0 || dec > 255) {
+                    alert("Masukkan Angka Desimal Antara 0 - 255!!");
+                } else {
+                    let binary = "";
+                    let temp = dec;
+                    for (let i = 7; i >= 0; i--) {
+                        binary += (temp >> i) & 1; 
+                    }
+                    hasil.value = binary;
+                }
+
+            } else if (pil === "binary_dec") {
+                if (!/^[01]{1,8}$/.test(input)) {
+                    alert("Harap Masukkan Angka Biner 8 bit Antara 0 atau 1!!");
+                } else {
+                    let dec = 0;
+                    for (let i = 0; i < input.length; i++) {
+                        dec = dec * 2 + parseInt(input[i]); 
+                    }
+                    hasil.value = dec;
+                }
+            }
+        }
+
+        function reset() {
+            document.getElementById("inputangka").value = "";
+            document.getElementById("hasilangka").value = "";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3.css">
+</head>
+<body>
+    <p>Tinggi Piramida: <input type="angka" id="t"> </p>
+    <button onclick="valInput()">Proses</button>
+    
+    <br><br>
+    <div id="hasil_tampilan"></div>
+    <script>
+        function get(id){
+            return document.getElementById(id);
+        }
+        function valInput(){
+            let angka_val = get("t").value; 
+            if (angka_val !== "" && !isNaN(angka_val) && angka_val > 0){
+                let input_angka = parseInt(angka_val);
+                piramid(input_angka);
+            } else{
+                alert("Masukkan Angka Yang Benar!!");
+            }
+        }
+        function piramid(t){
+            let hasil_tampilan = get("hasil_tampilan");
+            let table = "<table>";
+
+            for(let j=0; j<t; j++){
+                let spaces = "<td id='space'></td>".repeat(t - j - 1);
+                let blocks = "<td></td>".repeat(2 * j + 1);
+
+                table += `<tr>${spaces}${blocks}</tr>`;
+            }
+            table +="</table>";
+            hasil_tampilan.innerHTML = table;
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="1.css">
+</head>
+<body>
+<form>
+    <div>
+        <p>Angka Pertama : <input type="text" id="inputangka1"></p>
+        <p>Angka Kedua &nbsp;&nbsp;&nbsp;: <input type="text" id="inputangka2"></p>
+        <button type="button" onclick="hitung()">Count</button>
+
+        <table>
+            <tr>
+                <td id="pertamaangka1"></td>
+                <td>+</td>
+                <td id="pertamaangka2"></td>
+                <td>=</td>
+                <td id="totaltmbh"></td>
+            </tr>
+            <tr>
+                <td id="keduaangka1"></td>
+                <td>-</td>
+                <td id="keduaangka2"></td>
+                <td>=</td>
+                <td id="totalminus"></td>
+            </tr>
+        </table>
+    </div>
+
+</form>
+
+    <script>
+        function hitung(){
+            let angka1 = document.getElementById("inputangka1").value;
+            let angka2 = document.getElementById("inputangka2").value;
+            
+            if (angka1 !== "" && isNaN(angka1) ) {
+                alert("Angka pertama harus angka. Harap Isi Sesuai Ketentuan!!");
+                return;
+            } else if (angka2 !== "" && isNaN(angka2) ) {
+                alert("Angka kedua harus angka. Harap Isi Sesuai Ketentuan!!");
+                return;
+            }
+            angka1 = parseInt(angka1);
+            angka2 = parseInt(angka2);
+
+            let totaltmbh = angka1 + angka2;
+            let totalminus = angka1 - angka2;
+
+            document.getElementById("pertamaangka1").innerHTML = angka1;
+            document.getElementById("pertamaangka2").innerHTML = angka2;
+            document.getElementById("keduaangka1").innerHTML = angka1;
+            document.getElementById("keduaangka2").innerHTML = angka2;
+            document.getElementById("totaltmbh").innerHTML = totaltmbh;
+            document.getElementById("totalminus").innerHTML = totalminus;
+        }
+    </script>
+    
+</body>
+</html>

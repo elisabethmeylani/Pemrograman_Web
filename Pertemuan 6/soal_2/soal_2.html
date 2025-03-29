@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            border-collapse: separate;
+            border-spacing: 4px;
+            border: 2px solid black;
+            text-align: center;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="hasil_angka"></div> 
+    <script>
+        let input_angka;
+        let valid = false;
+
+        while (!valid) {
+            let angka_val = prompt("Masukkan sebuah angka: ");
+
+            if (angka_val !== null && angka_val.trim().length > 0 && !isNaN(angka_val)) {
+                input_angka = parseInt(angka_val);
+                valid = true; 
+            } else {
+                alert("Masukkan Angka Yang Benar!!");
+            }
+        }
+
+        let hasil_angka = "<table>";
+        let k = 1;
+
+        while (k <= input_angka) {
+            hasil_angka += "<tr>";
+            hasil_angka += "<td>" + k + "</td>";
+            hasil_angka += "<td>x</td>";
+            hasil_angka += "<td>" + input_angka + "</td>";
+            hasil_angka += "<td>=</td>";
+            hasil_angka += "<td>" + (k * input_angka) + "</td>";
+            hasil_angka += "</tr>";
+            k++;
+        }
+
+
+        hasil_angka += "</table>";
+        document.getElementById("hasil_angka").innerHTML = hasil_angka;
+    </script>
+
+</body>
+</html>

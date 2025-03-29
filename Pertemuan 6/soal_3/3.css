@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+    margin: auto;
+}
+table {
+    margin: auto;
+    border-collapse: collapse;
+}
+td {
+    width: 80px;
+    height: 60px;
+    background-color: orange;
+    border: 1px solid white;
+}
+#space {
+    background-color: transparent;
+}
