@@ -1,0 +1,53 @@
+body {
+    background-color: maroon;
+    font-family: Arial, sans-serif;
+    color: white;
+    display: flex;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    margin: 0;
+}
+
+.container {
+    margin: 20px; 
+}
+
+.box {
+    width: 175px;
+    padding: 35px;
+    background: url('images/box-tl.gif') top left no-repeat, 
+                url('images/box-tr.gif') top right no-repeat,
+                url('images/box-bl.gif') bottom left no-repeat,
+                url('images/box-br.gif') bottom right no-repeat,
+                url('images/box-t.gif') top repeat-x,
+                url('images/box-b.gif') bottom repeat-x,
+                url('images/box-l.gif') left repeat-y,
+                url('images/box-r.gif') right repeat-y,
+                #5a0e0e; 
+    border-radius: 10px;
+    border: 2px solid #fff;
+}
+
+.box-content {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+h2 {
+    color: #fff;
+    margin: 0;
+}
+
+.more {
+    text-align: right; 
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.more:hover {
+    color: green;
+    text-decoration: underline;
+}

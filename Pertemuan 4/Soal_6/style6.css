@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+table {
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px auto;
+}
+
+table, th, td {
+    border: 1px solid #98bf21;
+    padding: 4px;
+}
+
+th {
+    background-color: #a3c94a;
+    color: white;
+    text-align: left;
+}
+
+td {
+    background-color: #f8f8c7;
+}
+
+.footer {
+    background-color: #a3c94a;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;

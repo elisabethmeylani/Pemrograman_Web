@@ -1,0 +1,22 @@
+body {
+    font-size: 16px;
+}
+
+.purple-bullet {
+    list-style-image: url('sqpurple.gif');
+}
+
+.orange-bullet {
+    list-style-image: url('sqorange.gif');
+}
+
+a {
+    text-decoration: none;
+    color: orange;
+}
+
+b {
+    text-decoration: none;
+    color: white;
+}
+
