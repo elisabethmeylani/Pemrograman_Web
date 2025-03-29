@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <form>
+    <table border="1" cellpadding="10" cellspacing="0" align="center">
+        <tr>
+            <td>
+                <table cellpadding="5" cellspacing="0" align="center">
+                    <tr>
+                        <td colspan="2" align="center">
+                            <h2>Form Tambah Data User</h2>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">Name :</td>
+                        <td><input type="text" name="nama" size="30" required /></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Address :</td>
+                        <td><input type="text" name="addrres"  size="30" required /></td>
+                    </tr>
+                    </tr>
+                    <tr>
+                        <td align="left">Email :</td>
+                        <td>
+                            <input type="email" name="usremail" required size="30" requared/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td align="left">Home Page :</td>
+                        <td><input type="url" name="homepage" size="30"/></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Birthday :</td>
+                        <td><input type="date" name="bday"/></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Favorite Color :</td>
+                        <td><input type="color" name="favcolor"/></td>
+                    </tr>
+                    <tr>
+                        <td align="left">IPK :</td>
+                        <td><input type="number" name="ipk" min="0" max="4" step="0.1"/></td>
+                    </tr>
+                    <tr>
+                        <td align="left">Phone Number :</td>
+                        <td>
+                            <input type="text" name="phone" size="30" pattern="\d{3}-\d{7,10}" required/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" align="center">
+                            <input type="submit" value="Add">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>
