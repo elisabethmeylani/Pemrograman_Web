@@ -1,0 +1,15 @@
+div{
+    position: fixed;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 6px;
+    color:white
+}
+#kedua{
+    position: absolute;
+    left: 180px;
+    padding-top: 18px;
+    height: 32px;
+    z-index: -1;
+    color:black
+}

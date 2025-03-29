@@ -1,0 +1,97 @@
+body {
+    font-family: Verdana, sans-serif;
+}
+
+#container {
+    width: 620px;
+    margin: auto;
+}
+
+#header-section {
+    text-align: center;
+}
+
+#title-area {
+    background-color: yellow;
+    font-size: 27px;
+    padding: 10px;
+}
+
+#content {
+    width: 100%;
+}
+
+#menu-section {
+    width: 130px;
+    position: relative;
+    vertical-align: top;
+}
+
+#menu-background {
+    width: 120px;
+    height: 600px;
+    display: block;
+}
+
+#menu-list {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    text-align: left;
+}
+
+#menu-lion, #menu-armadillo, #menu-hyena, #menu-elephant, #menu-giraffe, #menu-gorilla {
+    font-size: 14px;
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+    margin-left: 15px;
+}
+
+#article-section {
+    padding-left: 15px;
+    vertical-align: top;
+}
+
+#image-box {
+    float: right;
+    width: 200px;
+    margin-left: 15px;
+}
+
+#image-box img {
+    width: 200px;
+    height: 150px;
+}
+
+#image-description {
+    width: 190px;
+    text-align: center;
+    font-size: 10px;
+    background-color: #4169E1;
+    color: white;
+    padding: 5px;
+}
+
+#footer {
+    text-align: center;
+    background-color: #4169E1;
+    color: black;
+    font-size: 12px;
+    width: 100%;
+    padding: 5px;
+    margin-top: 10px;
+}
+
+#article-title {
+    text-align: center;
+    color: #4169E1;
+    font-size: 22px;
+}
+
+#paragraph1, #paragraph2, #paragraph3 {
+    font-size: 13px;
+    text-align: justify;
+    color: #4169E1;
+    max-width: 420px;
+}

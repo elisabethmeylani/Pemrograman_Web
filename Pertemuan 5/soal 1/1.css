@@ -1,0 +1,55 @@
+table{
+    margin:0;
+    width: 100%;
+    height: 100px;
+}
+td {
+    padding: 20px;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+  }
+#content{
+   position: relative;
+   display: inline-block;
+
+}
+#star{
+    display: block;
+}
+#kiri, #kanan, #bawahkiri, #bawahkanan{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 5px solid red;
+
+}
+#kiri{
+    top:0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+}
+#kanan{
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+}
+#bawahkiri{
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+}
+#bawahkanan{
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+}
+#content:hover #kiri, #content:hover #kanan, #content:hover #bawahkiri, #content:hover #bawahkanan{
+    border-color: purple;
+}

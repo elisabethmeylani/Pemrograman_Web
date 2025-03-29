@@ -1,0 +1,42 @@
+#content {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    margin: 50px;
+
+}
+
+img{
+    position: absolute;
+}
+
+#red{
+    left:0;
+    top:0;
+    z-index: 1;
+}
+#red2{
+    left: 100px;
+    top:0;
+    z-index: 1;
+
+}
+#purple{
+    left: 50px;
+    top:0;
+    z-index: 2;
+}
+#half {
+    left: 0px;
+    top:0;
+    z-index: 3;
+    margin-right: -50px;
+    
+}   
+#half2{
+    left:100px;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    
+}

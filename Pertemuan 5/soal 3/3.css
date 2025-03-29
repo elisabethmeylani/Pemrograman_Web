@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+#banner{
+    width: 680px;
+    height: 50px;
+    background-color: red;
+    position: fixed;
+}
+
+#leftsidebar{
+    margin-top: 60px;
+    margin-right: 70px;
+    width: 150px;
+    height: 260px;
+    background-color: blue;
+    overflow: hidden;
+    position: fixed;
+}
+
+#maincontent{
+    width: 500px;
+    height: 300px;
+    background-color: green;
+    float:left;
+    padding: 10px;
+    margin-left: 160px;
+    position: fixed;
+}
+
+#content{
+    text-align: justify;
+    float: left;
+}
+
+#kuning{
+    margin-left: 10px;
+    width: 160px;
+    height: 160px;
+    background-color: yellow;
+    float: right;
+}
