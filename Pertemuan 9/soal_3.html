@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elisabeth Meylani_2373035</title>
+</head>
+<body>
+    <table  cellpadding="4">
+        <tr>
+            <td>Data</td>
+            <td><input type="text" id="hasilangka"></td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="addData()">Add</button>
+            </td>
+            <td>
+                <select id="pilihanOperasi" onchange="hitung()">
+                    <option value="pilihan">Pilih Operasi</option>
+                    <option value="display">Display</option>
+                    <option value="count">Count</option>
+                    <option value="sum">Sum</option>
+                    <option value="avg">Average</option>
+                    <option value="max">Max</option>
+                    <option value="min">Min</option>
+                    <option value="ganjil">Ganjil</option>
+                    <option value="genap">Genap</option>
+                    <option value="hapus">Hapus</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Hasil</td>
+            <td><input type="text" id="hasilOutput" readonly></td>
+        </tr>
+    </table>
+
+    <script>
+        let hasilangka = [];
+
+        function addData(){
+            let input = document.getElementById('hasilangka');
+            let angka = input.value.trim();
+
+            if (angka !== "" && !isNaN(angka)){
+                hasilangka.push(Number(angka));
+                input.value = "";
+            } else {
+                alert("Masukkan angka yang valid!");
+            }
+        }
+
+        function hitung(){
+            let pilihan = document.getElementById('pilihanOperasi').value;
+            let hasil = document.getElementById('hasilOutput');
+            let output = "";
+
+            if (pilihan === "display") {
+                output = hasilangka.join(", ");
+            }
+            else if (pilihan === "count") {
+                output = hasilangka.length;
+            }
+            else if (pilihan === "sum") {
+                let jumlah = 0;
+                for (let i = 0; i < hasilangka.length; i++) {
+                    jumlah += hasilangka[i];
+                }
+                output = jumlah;
+            }
+            else if (pilihan === "avg") {
+                let jumlah = 0;
+                for (let i = 0; i < hasilangka.length; i++) {
+                    jumlah += hasilangka[i];
+                }
+                if (hasilangka.length > 0) {
+                    output = (jumlah / hasilangka.length).toFixed(2);
+                } else {
+                    output = "0";
+                }
+            }
+            else if (pilihan === "max") {
+                if (hasilangka.length > 0) {
+                    let maksimum = hasilangka[0];
+                    for (let i = 1; i < hasilangka.length; i++) {
+                        if (hasilangka[i] > maksimum) {
+                            maksimum = hasilangka[i];
+                        }
+                    }
+                    output = maksimum;
+                }
+            }
+            else if (pilihan === "min") {
+                if (hasilangka.length > 0) {
+                    let minimum = hasilangka[0];
+                    for (let i = 1; i < hasilangka.length; i++) {
+                        if (hasilangka[i] < minimum) {
+                            minimum = hasilangka[i];
+                        }
+                    }
+                    output = minimum;
+                }
+            }
+            else if (pilihan === "ganjil") {
+                let hasilGanjil = [];
+                for (let i = 0; i < hasilangka.length; i++) {
+                    if (hasilangka[i] % 2 !== 0) {
+                        hasilGanjil.push(hasilangka[i]);
+                    }
+                }
+                output = hasilGanjil.join(", ");
+            }
+            else if (pilihan === "genap") {
+                let hasilGenap = [];
+                for (let i = 0; i < hasilangka.length; i++) {
+                    if (hasilangka[i] % 2 === 0) {
+                        hasilGenap.push(hasilangka[i]);
+                    }
+                }
+                output = hasilGenap.join(", ");
+            }
+            else if (pilihan === "hapus") {
+                hasilangka = [];
+            }
+
+            hasil.value = output;
+            document.getElementById('pilihanOperasi').value = "pilihan";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Elisabeth Meylani_2373035</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+    }
+
+    th, td {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: left;
+    }
+
+    .blue {
+      background-color: #ADD8E6;
+    }
+
+    .cream {
+      background-color: #FFDAB9;
+    }
+    
+  </style>
+</head>
+<body>
+
+    <table id="programmingtable">
+        <tr style="background-color: #CFC">
+            <th><b>Position</b></th>
+            <th><b>Programming Language</b></th>
+            <th><b>Ratings</b></th>
+        </tr>
+        <tr class="blue">
+            <td>1</td>
+            <td>C</td>
+            <td>18.058%</td>
+        </tr>
+        <tr class="cream">
+            <td>2</td>
+            <td>Java</td>
+            <td>18.051%</td>
+        </tr>
+        <tr class="blue">
+            <td>3</td>
+            <td>C++</td>
+            <td>9.707%</td>
+        </tr>
+        <tr class="cream">
+            <td>4</td>
+            <td>PHP</td>
+            <td>9.662%</td>
+        </tr>
+        <tr class="blue">
+            <td>5</td>
+            <td>(Visual) Basic</td>
+            <td>6.392%</td>
+        </tr>
+    </table>
+
+    <script>
+        const rows = document.querySelectorAll("#programmingtable tr:not(:first-child)");
+        rows.forEach(row => {
+            row.addEventListener("mouseenter", function() {
+            this.style.backgroundColor = "#CCFFAA";
+            });
+
+            row.addEventListener("mouseleave", function() {
+            this.style.backgroundColor = "";
+            });
+        });
+    </script>
+
+</body>
+</html>

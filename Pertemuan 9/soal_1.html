@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elisabeth Meylani_2373035</title>
+  <style>
+    textarea {
+      padding-left: 5px;
+      width: 163px;
+      height: 50px;
+      margin-top: 40px;
+      vertical-align: middle;
+    }
+    
+    input {
+      vertical-align: middle;
+    }
+    
+    h3 {
+      display: inline-block;
+      width: 100px;
+      margin: 0px;
+      vertical-align: middle;
+    }
+    
+    #deskripsi2 {
+      border: none;
+      text-align: right;
+      display: inline-block;
+      width: 40px;
+      padding-top: 90px;
+    }
+    
+  </style>
+</head>
+<body>
+  <form>
+    <h3><b>Judul: </b></h3> 
+    <input type="text" id="judul">
+    <br>
+    <h3><b>Deskripsi: </b></h3>
+    <textarea id="deskripsi" onkeyup="hitungKarakter(this)" onkeydown="hitungKarakter(this)"></textarea>
+    <input type="text" id="deskripsi2" value="0/256" readonly>
+  </form>
+
+  <script>
+    function hitungKarakter(ob) {
+      var obval = ob.value;
+
+      if (obval.length > 256) {
+        ob.value = obval.substr(0, 256);
+        obval = ob.value;
+      }
+
+      document.getElementById("deskripsi2").value = obval.length + "/256";
+    }
+  </script>
+</body>
+</html>
