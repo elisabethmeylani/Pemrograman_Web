@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elisabeth Meylani_2373035</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    ol.nav {
+      list-style: none;
+      padding: 0;
+      margin: auto;
+      background: rgb(247, 24, 195);
+      display: flex;
+      margin-right: 150vh;
+    }
+
+    ol.nav > li {
+      position: relative;
+      padding: 10px 30px;
+      color: white;
+    }
+
+    ol.nav li ol {
+      display: none; 
+      position: absolute;
+      top: 38px;
+      left: 0px;
+      background: white;
+      border: 2px solid rgb(247, 24, 195);
+      padding: 4px;
+      list-style: none;
+    }
+
+    ol.nav li ol li {
+      padding: 5px;
+      color: black;
+    }
+
+    ol.nav li ol li:hover {
+      background: white;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+    <ol class="nav">
+    <li class="isinav">jQuery
+        <ol>
+        <li><u>Download</u></li>
+        <li><u>Documentation</u></li>
+        <li><u>Blog</u></li>
+        </ol>
+    </li>
+    <li class="isinav">Community
+        <ol>
+        <li><u>Mailing List</u></li>
+        <li><u>Tutorials</u></li>
+        <li><u>Demos</u></li>
+        <li><u>Plugins</u></li>
+        </ol>
+    </li>
+    <li class="isinav">Development
+        <ol>
+        <li><u>Source Code</u></li>
+        <li><u>Bug Tracking</u></li>
+        <li><u>Recent Changes</u></li>
+        </ol>
+    </li>
+    </ol>
+
+    <script>
+    $(document).ready(function() {
+    $(".nav li").hover(
+        function() {
+        $(this).children("ol").show();
+        },
+        function() {
+        $(this).children("ol").hide();
+        }
+    );
+    });
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Elisabeth Meylani_2373035</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    div {
+      width: 50px;
+      height: 50px;
+      float: left;
+      border: 2px solid blue;
+    }
+    button {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="ubah">Change colors</button>
+  <br><br>
+  
+  <div class="kotak"></div>
+  <div class="kotak"></div>
+  <div class="kotak"></div>
+  <div class="kotak"></div>
+  <div class="kotak"></div>
+  <div class="kotak"></div>
+  <div class="kotak"></div>
+  <div class="kotak"></div>
+
+  <script>
+    $("#ubah").click(function () {
+      let stop = false;
+      $(".kotak").each(function () {
+        if ($(this).attr("status") === "selected") {
+          stop = true;
+          return false; 
+        }
+        
+        $(this).css("background-color", "yellow");
+      });
+    });
+
+    $(".kotak").click(function () {
+      $(".kotak").css("background-color", "").removeAttr("status");
+      $(this).css("background-color", "red").attr("status", "selected");
+    });
+  </script>
+
+</body>
+</html>

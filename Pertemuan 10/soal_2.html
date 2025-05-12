@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elisabeth Meylani_2373035</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      padding: 10px;
+    }
+
+    input[type="text"] {
+      padding: 4px;
+      font-size: 13px;
+      width: 150px;
+    }
+
+    button {
+      padding: 4px 8px;
+      font-size: 13px;
+      margin-left: 5px;
+    }
+
+    #list {
+      margin-top: 15px;
+    }
+
+    #list div {
+      margin: 5px 0;
+      font-size: 15px;
+    }
+
+    .search {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <input type="text" id="nama" placeholder="Masukkan nama">
+  <button id="addBtn">Add</button>
+  <button id="searchBtn">Search</button>
+
+  <div id="list">
+    <div>John Resig</div>
+    <div>George Martin</div>
+    <div>Malcom John Sinclair</div>
+    <div>J. Ohn</div>
+  </div>
+
+  <script>
+    $(document).ready(function(){
+      $('#addBtn').click(function(){
+        var name = $('#nama').val();
+        if(name.trim() !== ''){
+          $('<div>' + name + '</div>').appendTo('#list');
+          $('#nama').val('');
+        }
+      });
+
+      $('#searchBtn').click(function(){
+        var search = $('#nama').val().toLowerCase();
+        $('#list div').removeClass('search');
+
+        $('#list div').filter(function(){
+          return $(this).text().toLowerCase().includes(search);
+        }).addClass('search');
+      });
+    });
+  </script>
+
+</body>
+</html>

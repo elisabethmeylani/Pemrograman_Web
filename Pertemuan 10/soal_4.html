@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Elisabeth Meylani_2373035</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 70px;
+            margin: 20px;
+            background: white;
+        }
+        td {
+            text-align: center;
+            padding: 10px;
+            border: 2px solid black;
+        }
+        hr {
+            margin: 5px ;
+            border: none;
+            border-top: 1px solid black;
+    
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td>
+                <input class="header" type="checkbox"/><br/>
+                <hr/>
+                <input class="body" type="checkbox"/><br/>
+                <input class="body" type="checkbox"/><br/>
+                <input class="body" type="checkbox"/><br/>
+                <input class="body" type="checkbox"/><br/>
+            </td>
+        </tr>
+    </table>
+
+
+    <script>
+    $(document).ready(function(){
+        $("input:checkbox.header").click(function(){
+            var flag = $(this).is(":checked"); 
+            if(flag){
+                $("input:checkbox.body").prop("checked", true);
+            } else {
+                $("input:checkbox.body").prop("checked", false);
+            }
+        });
+
+        $("input:checkbox.body").click(function(){
+            var total = $("input:checkbox.body").length;
+            var checked = $("input:checkbox.body:checked").length;
+            if(total == checked){
+                $("input:checkbox.header").prop("checked", true);
+            } else {
+                $("input:checkbox.header").prop("checked", false);
+            }
+        });
+    });
+    </script>
+</body>
+</html>
