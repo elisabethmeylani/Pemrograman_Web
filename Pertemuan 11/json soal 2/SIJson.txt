@@ -1,0 +1,25 @@
+{
+  "title": "Portal S1-Sistem Informasi",
+  "link": "http://si.itmaranatha.org",
+  "generator": "S1-SI FIT UKM",
+  "items": [
+    {
+      "title": "BIE02 - Pemrograman Web",
+      "link": "https://morning.maranatha.edu/course/view.php?id=4245",
+      "universitas": { "m": "http://www.itmaranatha.org/" },
+      "description": "Matakuliah ini akan mengenalkan ...",
+      "published": "01-January-2023",
+      "author": "Dosen S1-SI",
+      "tags": "S1-Sistem Informasi, Pemrograman Web"
+    },
+    {
+      "title": "IS407 - Basis Data 2",
+      "link": "http://si.itmaranatha.org/index.php/is407-basis-data-2",
+      "universitas": { "m": "http://www.itmaranatha.org/" },
+      "description": "Mata kuliah ini mengajarkan ...",
+      "published": "01-January-2023",
+      "author": "Dosen S1-SI",
+      "tags": "S1-Sistem Informasi, Basis Data 2"
+    }
+  ]
+}

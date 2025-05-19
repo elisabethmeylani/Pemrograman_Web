@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elisabeth Meylani_2373035</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body {
+      font-family: Arial;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .title {
+      font-weight: bold;
+      font-size: 20px;
+      color: blue;
+      text-align: center;
+    }
+
+    .item-title {
+      font-weight: bold;
+    }
+
+    hr {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 800px;
+      border: 3px double black;
+    }
+
+    td {
+      border: 3px double black;
+      padding: 10px;
+      font-weight: bold;
+    }
+
+    #output {
+      border: 3px double black;
+      padding: 20px;
+      width: 800px;
+      margin-top: 20px;
+      display: none;
+    }
+
+    #datatable {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <table id="datatable">
+    <tr><td>Title</td></tr>
+    <tr><td>Content</td></tr>
+    <tr><td>Generator</td></tr>
+  </table>
+
+  <button id="look">Look</button>
+
+  <div id="output">
+    <div id="output"></div>
+  </div>
+
+  <script>
+    $(document).ready(function () {
+      $("#look").click(function () {
+        $.getJSON("SIJson.txt", function (data) {
+          $("#datatable").hide();
+
+          var output = '';
+          output += '<div class="title"><a href="' + data.link + '">' + data.title + '</a></div><br>';
+
+          $.each(data.items, function (i, item) {
+            output += '<div>' +
+              '<a class="item-title" href="' + item.link + '">' + item.title + '</a><br>' +
+              'By : ' + item.author + ' / <i>' + item.published + '</i><br><br>' +
+              item.description + '<br><br>' +
+              'Universitas : <a href="' + item.universitas.m + '">Click Here</a><br>' +
+              'Tag(s) : ' + item.tags +
+              '</div><hr>';
+          });
+
+          output += '<div>©' + data.generator + '</div>';
+          $("#output").html(output);
+          $("#output").show();
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
